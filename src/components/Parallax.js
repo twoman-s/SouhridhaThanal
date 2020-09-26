@@ -1,88 +1,27 @@
-import React, { useEffect } from "react";
-import mountain1 from "./../assets/images/parallax/mountain1.png";
-import mountain2 from "./../assets/images/parallax/mountain2.png";
-import mountain3 from "./../assets/images/parallax/mountain3.png";
-import plant from "./../assets/images/parallax/plant.png";
-import sky from "./../assets/images/parallax/sky.png";
+import React from "react";
+import banner from "./../assets/images/parallax/banner.png";
 import "./../assets/Parallax.css";
 import logo from "./../assets/images/logo/logo.png";
 import Carousel from "./Carousel";
 function Parallax() {
-  useEffect(() => {
-    const translate = document.querySelectorAll(".translate");
-    const big_title = document.querySelector(".big-title");
-    const header = document.querySelector("header");
-    const shadow = document.querySelector(".shadow");
-    // const content = document.querySelector(".content");
-    const section = document.querySelector("section");
-    // const image_container = document.querySelector(".imgContainer");
-    // const opacity = document.querySelectorAll(".opacity");
-    const border = document.querySelector(".border");
-
-    let header_height = header.offsetHeight;
-    let section_height = section.offsetHeight;
-
-    window.addEventListener("scroll", () => {
-      let scroll = window.pageYOffset;
-      let sectionY = section.getBoundingClientRect();
-
-      translate.forEach((element) => {
-        let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
-      });
-
-      //   opacity.forEach((element) => {
-      //     element.style.opacity = scroll / (sectionY.top + section_height);
-      //   });
-
-      big_title.style.opacity = -scroll / (header_height / 2) + 1;
-      shadow.style.height = `${scroll * 0.5 + 300}px`;
-
-      //   content.style.transform = `translateY(${
-      //     (scroll / (section_height + sectionY.top)) * 50 - 50
-      //   }px)`;
-      //   image_container.style.transform = `translateY(${
-      //     (scroll / (section_height + sectionY.top)) * -50 + 50
-      //   }px)`;
-
-      border.style.width = `${
-        (scroll / (sectionY.top + section_height)) * 40
-      }%`;
-    });
-  });
   return (
     <>
       <header id="home" className="container">
-        <h1 className="big-title translate" data-speed="0.1">
-          Souhrudha Thanal
-        </h1>
-        <img
-          src={plant}
-          className="person translate"
-          data-speed="-0.25"
-          alt=""
-        />
-        <img
-          src={mountain1}
-          className="mountain1 translate"
-          data-speed="-0.2"
-          alt=""
-        />
-        <img
-          src={mountain2}
-          className="mountain2 translate"
-          data-speed="0.4"
-          alt=""
-        />
-        <img
-          src={mountain3}
-          className="mountain3 translate"
-          data-speed="0.3"
-          alt=""
-        />
-        <img src={sky} className="sky translate" data-speed="0.5" alt="" />
+        <div className="carousel slide container">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img className="banner" src={banner} alt="banner" />
+              <div className="carousel-caption c-banner">
+                <h3>Welcome to</h3>
+                <h1>
+                  <span className="main">Souhrudha</span> Thanal
+                </h1>
+                <h2>Nidhi Limited</h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-      ` <Carousel />`
       <section id="aboutus">
         <div className="shadow"></div>
 
@@ -104,6 +43,7 @@ function Parallax() {
           </div>
         </div>
       </section>
+      ` <Carousel />`
     </>
   );
 }
