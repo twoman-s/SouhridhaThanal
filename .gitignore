@@ -3,9 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
-/images
+images/
 .pnp.js
-/hosting
+hosting/
 
 # testing
 /coverage
