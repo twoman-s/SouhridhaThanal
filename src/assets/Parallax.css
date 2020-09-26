@@ -9,6 +9,7 @@ header {
 }
 .carousel-caption.c-banner {
   padding-top: 200px !important;
+  background: rgba(0, 0, 0, 0.5);
 }
 /* span.main {
   color: var(--main-color);

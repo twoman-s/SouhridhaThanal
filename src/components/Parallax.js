@@ -23,8 +23,6 @@ function Parallax() {
         </div>
       </header>
       <section id="aboutus">
-        <div className="shadow"></div>
-
         <div className="container">
           <div className="content opacity">
             <h3 className="title">About Us</h3>
