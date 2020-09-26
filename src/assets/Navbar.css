@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --main-color: rgb(146, 85, 38) !important;
+  --main-color-combo: white !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+button.navbar-toggler {
+  outline: none;
+  border: none !important;
+}
+.logo {
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(146, 85, 38, .7) ' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+.navbar {
+  position: fixed !important;
+  background: rgb(255, 255, 255) !important;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-nav a {
+  color: var(--main-color) !important;
+  margin-right: 10px;
+}
+.navbar-nav a::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 60px;
+  height: 30px;
+  border-top: 1px solid var(--main-color) !important;
+  border-bottom: 1px solid var(--main-color) !important;
+  transition: 0.5s;
+  transform: scaleY(2);
+}
+.navbar-nav a:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+a.logo-name {
+  color: var(--main-color) !important;
+  margin-top: -15px !important;
+  padding-left: 10px !important;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+}
+a.logo-name::before {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 45px;
+  font-size: 14px;
+  font-weight: bold;
+  content: "Nidhi Limited";
+}
