@@ -6,6 +6,7 @@ import plant from "./../assets/images/parallax/plant.png";
 import sky from "./../assets/images/parallax/sky.png";
 import "./../assets/Parallax.css";
 import logo from "./../assets/images/logo/logo.png";
+import Carousel from "./Carousel";
 function Parallax() {
   useEffect(() => {
     const translate = document.querySelectorAll(".translate");
@@ -81,7 +82,7 @@ function Parallax() {
         />
         <img src={sky} className="sky translate" data-speed="0.5" alt="" />
       </header>
-
+      ` <Carousel />`
       <section id="aboutus">
         <div className="shadow"></div>
 

@@ -1,0 +1,86 @@
+.services-section {
+  background: url(./images/background/homeloan.jpg);
+  background-size: cover;
+}
+
+.inner-width {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section-title {
+  color: var(--main-color-combo);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.border-title {
+  width: 160px;
+  height: 2px;
+  background: var(--main-color-combo);
+  margin: 40px auto;
+  margin-top: 0;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service-box {
+  max-width: 33.33%;
+  padding: 15px;
+  text-align: center;
+  color: var(--main-color-combo);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.service-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid var(--main-color-combo);
+  transform: rotate(45deg);
+  margin-bottom: 30px;
+  transition: 0.3s linear;
+}
+.service-icon i {
+  line-height: 70px;
+  transform: rotate(-45deg);
+  font-size: 26px;
+}
+.service-box:hover .service-icon {
+  background: var(--main-color-combo);
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+}
+.service-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.service-desc {
+  font-size: 16px;
+}
+@media screen and (max-width: 960px) {
+  .service-box {
+    max-width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .service-box {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .service-box {
+    max-width: 100%;
+  }
+}

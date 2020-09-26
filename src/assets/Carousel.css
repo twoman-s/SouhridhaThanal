@@ -1,3 +1,6 @@
+.carousel {
+  z-index: 1000;
+}
 .carousel-item img {
   height: 350px;
   object-fit: cover;
